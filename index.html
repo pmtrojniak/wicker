@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiklinowe Rękodzieło</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+        
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            background-color: #f5e1c8;
+            color: #2f4f2f;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2f4f2f;
+            color: white;
+            padding: 20px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .contact-form {
+            background: white;
+            padding: 15px;
+            margin: 40px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #2f4f2f;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #2f4f2f;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        footer {
+            background-color: #2f4f2f;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .logo {
+            margin-top: 10px;
+        }
+        .logo img {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wiklinowe Rękodzieło</h1>
+        <p>Unikalne produkty z wikliny ręcznie wykonane</p>
+    </header>
+    
+    <section class="products">
+        <!-- Placeholdery dla 40 produktów -->
+        <script>
+            for (let i = 1; i <= 40; i++) {
+                document.write(`
+                    <a href="produkt.html?id=${i}" style="text-decoration: none; color: inherit;">
+                        <div class="product">
+                            <img src="images/kosz_placeholder.jpg" alt="Produkt ${i}">
+                            <h2>Produkt ${i}</h2>
+                            <p>Cena: --- zł</p>
+                        </div>
+                    </a>
+                `);
+            }
+        </script>
+    </section>
 
+    <section class="contact-form">
+        <h2>Skontaktuj się</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Twoje imię" required>
+            <input type="email" name="email" placeholder="Twój e-mail" required>
+            <textarea name="message" rows="4" placeholder="Twoja wiadomość" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Kontakt: kontakt@wiklinowe-rekodzielo.pl</p>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo firmy">
+        </div>
+    </footer>
+</body>
+</html>
