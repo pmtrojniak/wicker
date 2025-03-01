@@ -1,9 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id') || 1;
-
-    document.getElementById("product-image").src = `images/kosz_placeholder.jpg`;
-    document.getElementById("product-title").textContent = `Produkt ${productId}`;
-    document.getElementById("product-description").textContent = `Opis produktu ${productId}...`;
+document.addEventListener("DOMContentLoaded", function () {
+    const productSection = document.querySelector('.products');
+    
+    for (let i = 1; i <= 40; i++) {
+        const productHTML = `
+            <a href="produkt.html?id=${i}" style="text-decoration: none; color: inherit;">
+                <div class="product">
+                    <img src="images/kosz_placeholder.jpg" alt="Produkt ${i}">
+                    <h2>Produkt ${i}</h2>
+                    <p>Cena: --- zł</p>
+                </div>
+            </a>
+        `;
+        productSection.innerHTML += productHTML;
+    }
 });
-
