@@ -1,1 +1,24 @@
+body {
+    font-family: 'Caveat', cursive;
+    background-color: #f5e1c8;
+    color: #2f4f2f;
+    text-align: center;
+}
+
+header, footer {
+    background-color: #2f4f2f;
+    color: white;
+    padding: 10px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-list a {
+    text-decoration: none;
+    color: #2f4f2f;
+}
 
